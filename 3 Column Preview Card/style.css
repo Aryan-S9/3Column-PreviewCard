@@ -1,0 +1,183 @@
+/*  =====================
+        Font-Faces
+    ===================== */
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url(/Fonts/LexendDeca-Regular.ttf);
+  font-weight: 700;
+  font-style: bold;
+}
+@font-face {
+  font-family: "Big Shoulders Display";
+  src: url(/Fonts/BigShouldersDisplay-Bold.ttf);
+  font-weight: 400;
+  font-style: regular;
+}
+
+/*  ================================
+        Setting Custom Properties
+    ================================ */
+
+:root {
+  --clr-primary-01: hsl(31, 77%, 52%);
+  --clr-primary-02: hsl(184, 100%, 22%);
+  --clr-primary-03: hsl(179, 100%, 13%);
+
+  --clr-neutral-white: hsla(0, 0%, 100%, 0.75);
+  --clr-neutral-grey: hsl(0, 0%, 95%);
+
+  font-size: 62.5%;
+}
+
+/* RESET */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--clr-neutral-grey);
+}
+
+/*  ======================
+        Typography 
+    ====================== */
+
+.container {
+  width: 90%;
+  padding: 5em 0;
+  margin: auto;
+  font-family: "Lexend Deca", serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--clr-neutral-grey);
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 992px) {
+  .container {
+    flex-direction: row;
+    align-items: center;
+    padding: 7.5em 0;
+  }
+  p{
+    min-height: 160px;
+  }
+}
+
+@media screen and (min-width: 1115px) {
+  .container {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1220px) {
+  .container {
+    padding: 8em 0;
+    width: 70%;
+  }
+}
+/* @media screen and (min-width: 1440px) {
+  .container {
+    flex-direction: row;
+    align-items: center;
+    padding: 7.5em 0;
+    width: 70%;
+  }
+} */
+
+.sedans,
+.luxury,
+.suvs {
+  padding: 5rem 5rem 3rem;
+}
+img {
+  margin-bottom: 2rem;
+}
+h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+}
+p {
+  color: var(--clr-neutral-white);
+  margin-bottom: 3.75rem;
+  line-height: 1.6;
+}
+button {
+  padding: 1em 2.25em;
+  border-radius: 2em;
+  border: 2px solid transparent;
+}
+
+/*  =====================
+        Layout 
+    ===================== */
+
+.sedans,
+.sedans-button:hover {
+  background-color: var(--clr-primary-01);
+}
+.suvs,
+.suvs-button:hover {
+  background-color: var(--clr-primary-02);
+}
+.luxury,
+.luxury-button:hover {
+  background-color: var(--clr-primary-03);
+}
+
+.sedans-button,
+.suvs-button,
+.luxury-button {
+  background-color: var(--clr-neutral-grey);
+}
+
+.sedans-button {
+  color: var(--clr-primary-01);
+}
+.suvs-button {
+  color: var(--clr-primary-02);
+}
+.luxury-button {
+  color: var(--clr-primary-03);
+}
+
+.sedans-button:hover,
+.suvs-button:hover,
+.luxury-button:hover {
+  cursor: pointer;
+  color: var(--clr-neutral-grey);
+  border: 2px solid var(--clr-neutral-grey);
+}
+
+.sedans {
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+.luxury {
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+
+@media screen and (min-width: 992px) {
+  .sedans {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+  }
+
+  .luxury {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+  }
+}
